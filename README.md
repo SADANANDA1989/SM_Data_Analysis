@@ -1,15 +1,6 @@
-# SM_Data_Analysis(https://github.com/SADANANDA1989/SM_Data_Analysis.git)
 
-##title: "Amazon_book"
-author: ---
-"SMeher"
-date: "2025-07-11"
-output:
-  pdf_document: default
-  html_document: default
----
--- *AMAZON BOOK CASE STUDY*
-#Pacage installation
+## **AMAZON BOOK CASE STUDY**
+## Pacage installation
 ```{r}
 library(tidyverse)
 
@@ -27,20 +18,20 @@ amazon_book <- read.csv("Amazon_bestseller_book.csv")
 
 ```
 
-# View the first few rows
+## View the first few rows
 ```{r view rows}
 head(amazon_book)
 
 ```
-# Get summary statistics
+## Get summary statistics
 ```{r summary}
 summary(amazon_book)
 ```
-# Check the structure of the data
+## Check the structure of the data
 ```{r structure}
 str(amazon_book)
 ```
-# Count books by genre
+## Count books by genre
 ```{r Count books by genre}
 table(amazon_book$Genre)
 
