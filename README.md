@@ -1,6 +1,6 @@
-# SM_Data_Analysis
-Big Data Analysis Using Power BI, Tableau, SQL &amp; RStudio
-title: "Amazon_book"
+# SM_Data_Analysis(https://github.com/SADANANDA1989/SM_Data_Analysis.git)
+
+##title: "Amazon_book"
 author: ---
 "SMeher"
 date: "2025-07-11"
