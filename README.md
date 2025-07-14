@@ -1,5 +1,5 @@
 
-## **AMAZON BOOK CASE STUDY**(https://sadananda1989.github.io/SM_Data_Analysis/)
+## [**AMAZON BOOK CASE STUDY**](https://sadananda1989.github.io/SM_Data_Analysis/)
 ## Pacage installation
 ```{r}
 library(tidyverse)
