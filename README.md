@@ -36,33 +36,33 @@ str(amazon_book)
 table(amazon_book$Genre)
 
 ```
-# Count books by rating
+## Count books by rating
 ```{r Count books by rating}
 table(amazon_book$User.Rating)
 ```
-# Average rating by genre
+## Average rating by genre
 
 ```{r  Average rating by genre}
 aggregate(`User.Rating` ~ Genre, data = amazon_book, mean)
 
 ```
-# Most frequent authors
+## Most frequent authors
 ```{r Most frequent authors}
 sort(table(amazon_book$Author), decreasing = TRUE) [1:10]
 ```
-# Top 5 frequent book name
+## Top 5 frequent book name
 ```{r Top 5 frequent book}
 sort(table(amazon_book$Name), decreasing = TRUE) [1:5]
 ```
-# Plot price distribution
+## Plot price distribution
 ```{r Plot price distribution}
 hist(amazon_book$Price, main = "Price Distribution of Bestsellers")
 ```
-# Plot ratings over time
+## Plot ratings over time
 ```{r Plot ratings over time}
 plot(`User.Rating` ~ Year, data = amazon_book)
 ```
-# Rename column to remove space
+## Rename column to remove space
 ```{r}
   colnames(amazon_book)[3] <- "User_Rating"
 ```
@@ -78,20 +78,20 @@ top_10_expensive <- amazon_book %>%
   head(10) %>%             
   select(Name, Author, Price, `User_Rating`, Reviews, Year, Genre)  
 
-# View the result
+## View the result
 print(top_10_expensive)
 ```
 --Method-2: Base R Approach
-# Top 10 higehest price book
-# Sort the data by Price in descending order and extract top 10
+## Top 10 higehest price book
+## Sort the data by Price in descending order and extract top 10
 ```{r Top 10 higehest price book}
 top_10_expensive <- amazon_book[order(-amazon_book$Price), ][1:10, ]
 ```
-# Select relevant columns
+## Select relevant columns
 ```{r}
 top_10_expensive <- top_10_expensive[, c("Price","Name", "Author",  "User_Rating", "Reviews", "Year", "Genre")]
 ```
-# View the result
+## View the result
 ```{r}
 print(top_10_expensive)
 ```
@@ -119,13 +119,13 @@ top_10_rated <- amazon_book %>%
   head(10) %>%                     # Select top 10
   select(Name, Author, `User_Rating`, Reviews, Price, Year, Genre)  # Keep key columns
 
-# View the result
+## View the result
 print(top_10_rated)
 ```
 --Method 2: Base R Approach
-# Sort by User Rating (descending) and take top 10
-# Select relevant columns (optional)
-# View the result
+## Sort by User Rating (descending) and take top 10
+## Select relevant columns (optional)
+## View the result
 ```{r}
 top_10_rated <- amazon_book[order(-amazon_book$`User_Rating`), ][1:10, ]
 
